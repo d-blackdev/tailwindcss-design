@@ -2,8 +2,14 @@
 
 body{
     @apply bg-gray-100;
+    @apply box-border;
 }
 
 @tailwind components;
+
+.secFull{
+    @apply min-w-full; 
+    /* @apply min-h-full; */
+}
 
 @tailwind utilities;

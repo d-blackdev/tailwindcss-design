@@ -597,6 +597,7 @@ video {
 
 body{
   background-color: #f7fafc;
+  box-sizing: border-box;
 }
 
 .container {
@@ -619,6 +620,11 @@ body{
   .container {
     max-width: 1024px;
   }
+}
+
+.secFull{
+  min-width: 100%;
+  /* @apply min-h-full; */
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
