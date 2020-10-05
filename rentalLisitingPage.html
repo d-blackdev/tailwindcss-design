@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentalListingPage</title>
+     <!-- tailwindcss -->
+     <link rel="stylesheet" href="./style.css">
+     <!-- index css -->
+     <link rel="stylesheet" href="./plugins/styles.css">
+     <!-- bootstrap -->
+     <link rel="stylesheet" href="./plugins/bootstrap.css">
+     <!-- font awesome -->
+     <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.css">
+</head>
+<body>
+        <!--header section  -->
+        <header class="secFull fixed ">
+            <div class="menu-btn minMd:hidden">
+                <span class="menu-btn-burger"></span>
+            </div>
+            <nav class=" p-4 list-nav fixed min-w-full ">
+                <a href="rentalIndex.html" class="nav-brand nav-brand2 text-gray-100 minMd:ml-24 pl-2 text-gray-300 font-bold text-2xl uppercase "> Rental</a>
+                <ul class="text-center capitalize  main-nav main-nav2 justify-start align-middle maxSm:hidden minMd:flex flex-row justify-evenly align-baseline w-3/5 text-white">
+                    <li><a href="rentalIndex.html">home</a></li>
+                    <li><a href="#">About </a></li>
+                    <li><a href="#">Contact </a></li>
+                    <li class="minMd:mr-0"><a href="#">Login</a></li>
+                    <li class="minMd:bg-white  minMd:w-24 minMd:p-2 minMd:border minMd:rounded mb-5"><a href="#" class="signUp">Sign Up</a></li>
+                </ul>
+            </nav>
+            <ul class="text-center uppercase nav-list nav-list2 hidden">
+                <a href="rentalIndex.html" class="nav-brand-hidden nav-brand  pl-2 text-gray-300 font-bold text-3xl uppercase"> Rental</a>
+       
+                <li><a href="rentalIndex.html">home</a></li>
+                <li><a href="#">Login </a></li>
+                <li><a href="#">Sign Up </a></li>
+                <li><a href="#">Pages <i class="fas fa-angle-right ml-2 inline-block dropdown-btn font-medium"></i></a></li>
+                <div class="dropdown-container text-sm">
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-base font-semibold ml-4">Space details</a></li>
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-base font-semibold ml-4">Listing spaces</a></li>
+                  
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-base font-semibold ml-4">About</a></li>
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-left text-base font-semibold ml-4">Contact</a></li>
+                
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-left text-base font-semibold ml-4">My account</a></li>
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-left text-base font-semibold ml-4">Authentication</a></li>
+                  <li class="drop"><a href="#" class="link-dropdown capitalize text-left text-base font-semibold ml-4">Blog</a></li>
+                </div>
+                <li><a href="#">Support <i class="fas fa-angle-right ml-2 inline-block support-dropdown-btn font-medium"></i></a></li>
+                <div class="support-content flex pl-16">
+                        <i class="fas fa-microphone support-icon mr-8 text-3xl pt-2"></i>
+                        <div class="flex flex-col">
+                            <h5 class="text-gray-800 text-left">Support</h5>
+                            <a href="#" class=" text-xs capitalize support-text text-left">Looking for answers? Ask us!</a>
+                        </div>
+                </div>
+            </ul>
+        </header>
+      
+       <main class="secFull listing-sec ">
+            <section class="secFull minMd:pt-64 banner maxSm:p-2 maxSm:pt-48 ">
+                <div class="container maxSm:w-11/12 mx-auto minMd:w-4/5 minMd:text-left ">
+                    <h6 class="text-gray-100 text-base maxSm:w-1/2 maxXs:w-full">Home <i class="fas fa-angle-right font-thin text-gray-600 mr-2"></i>United States<i class="fas fa-angle-right text-gray-600 mr-2 ml-2"></i>L'atelier Vancouver Rental</h6>
+                    <h4 class="text-gray-100 text-4xl mb-6 mt-4 maxSm:w-3/4">Space in United States</h4>
+                    <p class="text-gray-400 text-xl text-left minMd:text-2xl minMd:w-1/2  maxSm:w-3/4 maxXs:w-11/12"><span class="text-gray-500 font-semibold">12,000+</span> rental spaces with desks, offices & meeting rooms in <span class="text-gray-400 font-semibold">165+</span>countries.</p>
+                    <p class="text-xl  minMd:text-2xl text-gray-400 maxSm:mb-6 minMd:mb-8">Discover and reserve space today</p>
+                    
+                </div>
+            </section>
+        </main> 
+<!-- end of main section -->
+
+<!-- Tabs Section -->
+<section class="min-w-full maxSm:p-4 maxSm:pt-16 minMd:pt-16 TabSection  ">
+        <div class="minMd:w-4/5 mx-auto">
+                <!-- Tabs -->
+              <div class="bg-white border border-white shadow-md ">
+                    <ul class="nav nav-tabs tabs-link   minMd:flex  maxSm:flex maxSm:flex-col justify-between" id="myTab">
+                        <li class="nav-item single-tab flex  text-xl maxSm:p-4">
+                             <a href="#about" class="nav-link active" data-toggle="tab" ><i class="fas fa-address-card mr-2"></i>About
+                            </a>
+                        </li>
+                        <li class="nav-item single-tab text-xl text-gray-600 maxSm:p-4">
+                            <a href="#video" class="text-gray-600 nav-link not-active"   data-toggle="tab"><i class="fas fa-play-circle mr-2 text-gray-600"></i>Video</a>
+                        </li>
+                           
+                        <li class="nav-item single-tab text-xl text-gray-600 maxSm:p-4">
+                            <a href="#amenities"  class="text-gray-600 not-active nav-link"   data-toggle="tab"> <i class="fas fa-cubes mr-2 text-gray-600"></i>Amenities</a>
+                        </li>
+                            
+                        <li class="nav-item single-tab text-xl text-gray-600 maxSm:p-4">
+                           
+                            <a href="#reviews" class="text-gray-600 nav-link not-active"   data-toggle="tab"> <i class="fas fa-star mr-2 text-gray-600"></i>Reviews</a>
+                        </li>
+                        <li class="nav-item single-tab text-xl text-gray-600 maxSm:p-4">
+                            
+                            <a href="#location"  class="text-gray-600 nav-link not-active"   data-toggle="tab"><i class="fas fa-map-marker-alt mr-2 text-gray-600"></i>Location</a>
+                        </li>
+
+                    </ul>
+              </div>  
+              <!-- TABS PANE -->
+              <div class="tab-content" >
+                  <!-- About Content -->
+                    <div class="tab-pane mt-10 active" id="about">
+                        <h4 class="text-gray-900 text-4xl font-normal">L'atelier Vancouver Rental</h4>
+                        <div class="about-tab-location flex align-baseline mt-3">
+                            <i class="fa fa-check-circle  mr-2 mt-1"></i>
+                            <p class=" text-lg ">Verified</p>
+                        </div>
+                        <div class="about-tab-location flex align-baseline ">
+                            <i class="fa fa-map-marker-alt text-gray-800 mr-2 mt-1  "></i>
+                            <p class="text-gray-800  text-lg font-medium">New York, Manhatthan, USA</p>
+                        </div>
+                        <p class="leading-3 text-blue-600 text-lg">See Location</p>
+                        <div class="maxSm:grid maxSm:grid-cols-2 pt-10 gap-4 minMd:grid minMd:grid-cols-3">
+                            <!-- single-img -->
+                            <div class="about-img-container">
+                                <img src="./plugins/Image/interior-design-of-home-1643383.jpg" alt="img" class="about-img">
+                            </div>
+                            <!-- single-img -->
+                            <div class="about-img-container">
+                                <img src="./plugins/Image/apartment-blinds-cabinets-chairs-349749.jpg" alt="img" class="about-img">
+                            </div>
+                            <!-- single-img -->
+                            <div class="about-img-container">
+                                <img src="./plugins/Image/top-view-photo-of-curved-road-surrounded-by-trees-1834403.jpg" alt="img" class="about-img">
+                            </div>
+                            <!-- single-img -->
+                            <div class="about-img-container">
+                                <img src="./plugins/Image/four-brown-wooden-chairs-2635038.jpg" alt="img" class="about-img">
+                            </div>
+                            <!-- single-img -->
+                            <div class="about-img-container">
+                                <img src="./plugins/Image/interior-design-of-home-1643383.jpg" alt="img" class="about-img">
+                            </div>
+                            <!-- single-img -->
+                            <div class="about-img-container">
+                                <img src="./plugins/Image/apartment-blinds-cabinets-chairs-349749.jpg" alt="img" class="about-img">
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-700 pt-16"><span class="font-semibold text-gray-900">L'atelier</span> is the brainchild Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste quia esse veritatis optio et. Quasi esse et magni mollitia tenetur ab assumenda quos rerum fugit ex earum, placeat quidem?</p>
+                        <p class="text-lg text-gray-700">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolores et impedit sapiente, tempore nulla eius at nostrum repellat quis laborum itaque neque rerum aperiam dicta aspernatur maiores! Fugiat quisquam, necessitatibus adipisci sit, dolorem ad odio a fugit aliquam odit ratione architecto natus harum, nemo labore tempora? Vel, architecto sint.</p>
+                        <p class="text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus beatae, impedit corporis voluptates ipsa eveniet, porro rerum quam explicabo facere possimus accusamus dolores? Eum nostrum nam eligendi fugit modi ducimus quis, perferendis quas nihil saepe non, totam debitis nesciunt porro.</p>
+                        <div class="bg-gray-200 grid grid-cols-2 gap-0 divide-x-2 pt-8">
+                            <!-- single content -->
+                            <div class="text-center pb-8">
+                                <i class="fas fa-calendar-alt text-4xl  about-icon text-gray-700 pb-4"></i>
+                                <h4 class="text-2xl font-normal text-gray-900">1 Year</h4>
+                                <p class="text-2xl text-gray-600 text-center leading-3">Minimum term</p>
+                            </div>
+                            <!-- single content -->
+                            <div class="text-center  pb-8">
+                                <i class="fas fa-ruler-combined  about-icon text-4xl text-gray-700 pb-4"></i>
+                                <h4 class="text-2xl font-normal text-gray-900">180 SqFt</h4>
+                                <p class="text-2xl text-gray-600 text-center leading-3">Space size</p>
+                            </div>
+                            <!-- single content -->
+                            <div class="text-center  pb-8">
+                                <i class="fas fa-users text-4xl about-icon text-gray-500 pb-4"></i>
+                                <h4 class="text-2xl font-normal text-gray-900">15 <i class="fas fa-plus text-sm font-light align-middle block ml-2 pb-1"></i></h4>
+                                <p class="text-2xl text-gray-600 text-center leading-3">People</p>
+                            </div>
+                            <!-- single content -->
+                            <div class="text-center  pb-8">
+                                <i class="fas fa-couch  about-icon text-4xl text-gray-700 pb-4"></i>
+                                <h4 class="text-2xl font-normal text-gray-900">Meeting</h4>
+                                <p class="text-2xl text-gray-600 text-center leading-3">Space type</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Video Content -->
+                    <div class="tab-pane fade mt-12 rounded" id="video" >
+                        <video  width="100%" controls >
+                            <source  src="mov_bbb.mp4"  type="video/mp4">
+                            <source  src="mov_bbb.ogg"  type="video/ogg">
+                        </video>
+                    </div>
+                        
+                        
+                    <!-- Amenities Content -->
+                    <div class="tab-pane fade bg-gray-100 mt-10" id="amenities">
+                        <!-- single content -->
+                        <div class="bg-white border border-white shadow-sm mb-4 rounded-sm p-4">
+                            <h5 class="font-normal amenities-title mb-4 text-2xl">Basic</h5>
+                            <div class=" flex align-middle mt-2 leading-3">
+                                <i class="fa fa-check-circle text-base amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">High-Speed WiFi</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Air Conditioning</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3   "></i>
+                                <p class="amenities-text text-base text-left">Heating</p>
+                            </div>
+                        </div>
+                        <!-- single content -->
+                        <div class="bg-white border border-white shadow-sm rounded-sm mb-4 p-4">
+                            <h5 class="font-normal amenities-title mb-4 text-2xl">Seating</h5>
+                            <div class=" flex align-middle mt-2 leading-3">
+                                <i class="fa fa-check-circle text-base amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Standing Desks</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Ergonomic Chairs</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3  "></i>
+                                <p class="amenities-text text-base text-left">Beanbags</p>
+                            </div>
+                        </div>
+                        <!-- single content -->
+                        <div class="bg-white border border-white shadow-sm rounded-sm mb-4 p-4">
+                            <h5 class="font-normal amenities-title mb-4 text-2xl">Community</h5>
+                            <div class=" flex align-middle mt-2 leading-3">
+                                <i class="fa fa-check-circle text-base amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Events</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Community Lunches</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Workshops</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Community Drinks</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3  "></i>
+                                <p class="amenities-text text-base text-left">Facebook Groups for Members</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Mentorship</p>
+                            </div>
+                        </div>
+                        <!-- single content -->
+                        <div class="bg-white border border-white shadow-sm rounded-sm mb-4 p-4">
+                            <h5 class="font-normal amenities-title mb-4 text-2xl">Facilities</h5>
+                            <div class=" flex align-middle mt-2 leading-3">
+                                <i class="fa fa-check-circle text-base amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Kitchen</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Skypes Room</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Markerspace</p>
+                            </div>
+                        </div>
+                        <!-- single content -->
+                        <div class="bg-white border border-white shadow-sm rounded-sm p-4">
+                            <h5 class="font-normal amenities-title mb-4 text-2xl">Equipment</h5>
+                            <div class=" flex align-middle mt-2 leading-3">
+                                <i class="fa fa-check-circle text-base amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Gym</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon mr-3 "></i>
+                                <p class="amenities-text text-base text-left">Industrial Generators</p>
+                            </div>
+                            <div class=" flex align-baseline mt-2 leading-3">
+                                <i class="fa fa-check-circle amenities-icon  mr-3   "></i>
+                                <p class="amenities-text text-base text-left">Recreational Centers</p>
+                            </div>
+                        </div>
+                    </div>
+                            
+                            
+                    <!-- </div> -->
+                    <!-- Reviews Content -->
+                    <div class="tab-pane fade mt-12" id="reviews">
+                        <h6 class="mb-6 text-base font-normal text-gray-800">3 reviews found</h6>
+                        <!-- single reviews -->
+                        <div class="w-full bg-white shadow-sm p-4 mb-4">
+                            <div class="flex justify-between">
+                                <div class="flex justify-between">
+                                <div class="review-list-img-container mr-4 maxXs:mr-3">
+                                    <img src="./plugins/Image/avatar-ali.png" class="review-list-img" alt="img">
+                                </div>
+                                <div class="flex maxSm:flex-col align-middle pt-4 minMd:flex-row">
+                                    <h6 class="text-lg text-gray-800 minMd:mr-8">Magaret Maed</h6>
+                                    <p class="text-base text-gray-600">1 month ago</p>
+                                </div>
+                              </div>
+                                <div class="review-list-rating pt-4">
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs not-checked"></i>
+                                    
+                                </div>
+                            </div>
+                            <p class="amenities-text pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam asperiores eos blanditiis iusto dolor incidunt sed? Voluptates quas consequuntur ipsam.</p>
+                        </div>
+                        <!-- single reviews -->
+                        <div class="w-full bg-white shadow-sm p-4 mb-4">
+                            <div class="flex justify-between">
+                                <div class="flex justify-between">
+                                <div class="review-list-img-container mr-3">
+                                    <img src="./plugins/Image/avatar-richard.png" class="review-list-img" alt="img">
+                                </div>
+                                <div class="flex maxSm:flex-col align-middle pt-4 minMd:flex-row">
+                                    <h6 class="text-lg text-gray-800 minMd:mr-8">Richard Johnson</h6>
+                                    <p class="text-base text-gray-600">2 month ago</p>
+                                </div>
+                              </div>
+                                <div class="review-list-rating pt-4 ">
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs not-checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs not-checked"></i>
+                                    
+                                </div>
+                            </div>
+                            <p class="amenities-text pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nulla accusamus tempora sequi eius iusto voluptates error, ipsa nesciunt. Numquam, excepturi odit quaerat iure laboriosam dolores odio cupiditate fugit recusandae.</p>
+                        </div>
+                        <!-- single reviews -->
+                        <div class="w-full bg-white shadow-sm p-4">
+                            <div class="flex justify-between">
+                                <div class="flex justify-between">
+                                <div class="review-list-img-container mr-3">
+                                    <img src="./plugins/Image/avatar-anisha.png" class="review-list-img" alt="img">
+                                </div>
+                                <div class="flex maxSm:flex-col align-middle pt-4 minMd:flex-row">
+                                    <h6 class="text-lg text-gray-800 minMd:mr-8">Anisha Lee</h6>
+                                    <p class="text-base text-gray-600">6 month ago</p>
+                                </div>
+                              </div>
+                                <div class="review-list-rating pt-4 ">
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    <i class="fa fa-star maxXs:text-xs checked"></i>
+                                    
+                                </div>
+                            </div>
+                            <p class="amenities-text pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam asperiores eos blanditiis iusto dolor incidunt sed? Voluptates quas consequuntur ipsam.</p>
+                        </div>
+                        <div class="flex justify-between mb-2 mt-10">
+                            <h4 class="text-gray-800">Add a review</h4>
+                            <div class="review-list-rating ">
+                                <i class="fa fa-star not-checked"></i>
+                                <i class="fa fa-star not-checked"></i>
+                                <i class="fa fa-star not-checked"></i>
+                                <i class="fa fa-star not-checked"></i>
+                                <i class="fa fa-star not-checked"></i>
+                                
+                            </div>
+                        </div>
+                        <form action="" class="mt-2 w-full">
+                            <textarea name="textarea" id="" rows="10" placeholder="Add a review" class="p-4 w-full border border-gray-100 shadow" required></textarea>
+                            <div class="flex justify-between mt-6">
+                                <h6 class="text-sm text-gray-800">1000 characters remaining</h6>
+                                <button class="review-add-btn">Add review</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Location Content -->
+                    <div class="tab-pane fade pt-10" id="location">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.0277721143134!2d3.284460014296937!3d6.518168425034786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8f0100f6e931%3A0xbc7b61915b2e3cee!2sIsheri%20Oshun%20Rd%2C%20Lagos!5e0!3m2!1sen!2sng!4v1578314755145!5m2!1sen!2sng"
+                                width="w-full" height="670" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+              </div>
+              <!-- END OF PANE  -->
+        </div>
+</section>
+<!-- END OF TAB SECTION -->
+
+<!-- Owners section -->
+<section class="min-w-full maxSm:p-4 maxSm:pt-8 minMd:pt-10 TabSection pb-20 maxSm:pb-20">
+        <div class=" minMd:w-4/5 mx-auto ">
+                <div class="bg-gray-200 p-3 mb-6">
+                    <h5 class="text-3xl text-gray-900"><i class="fas fa-dollar-sign text-gray-700 text-2xl mr-2 font-thin"></i>250 <sub class="text-lg text-gray-600">/month</sub></h5>
+                </div>
+                <!-- Availability -->
+                <div class="bg-white p-6 mb-4">
+                    <button class="text-center booking-btn">Booking Availability</button>
+                </div>
+                <!-- Property Contact -->
+                <div class="bg-white w-full p-4 shadow-sm mb-4">
+                        <h4 class="ml-2 mb-4">Property Owner</h4>
+                        <div class="flex">
+                            <div class="review-list-img-container ml-1 mr-3">
+                                <img src="./plugins/Image/avatar-shanai.png" class="review-list-img" alt="img">
+                            </div>
+                            <h6 class="text-2xl text-gray-800 pt-4">Anisha Lee</h6>
+                        </div>
+                        <button class="text-white host-btn block mt-4">Contact Host</button>
+              </div>
+
+              <form action="" class="bg-white p-4 ">
+                <h4 class="mb-4">Request Desk</h4>
+                <!-- single input -->
+                <div class="border border-gray-100 mb-4 align-items-center flex">
+                    <i class="fa fa-user form-icon mr-1 inline-block ml-1 mt-1 p-3"></i>
+                    <input type="text" placeholder="Name"  class=" p-3 h-full w-full block" required>
+                </div>
+                <!-- single input -->
+                <div class="border border-gray-100 mb-4 align-items-center flex">
+                    <i class="fa fa-envelope form-icon mr-1 inline-block ml-1 mt-1 p-3"></i>
+                    <input type="email" placeholder="Email"  class=" p-3 h-full w-full block" required>
+                </div>
+                <!-- single input -->
+                <div class="border border-gray-100 mb-4 align-items-center flex">
+                    <i class="fa fa-mobile form-icon mr-1 inline-block ml-1 mt-1 p-3"></i>
+                    <input type="tel" placeholder="Phone"  class=" p-3 h-full w-full block">
+                </div>
+                <textarea name="textarea" id="" cols="3" rows="10" required class="w-full border border-gray-100 p-4" placeholder=" Write a short meassage to host"></textarea>
+
+                <button class="booking-btn mt-4">Send Request</button>
+            </form>
+        </div>
+</section>
+
+<!-- SIMILAR SPACES SECTION -->
+<section class="min-w-full  pt-20 bg-gray-200 maxSm:px-4 pb-20">
+            <h4 class="text-gray-800 pb-10 minMd:pl-32">Similar spaces you might like</h4>
+        <div class="minMd:w-4/5 mx-auto minMd:grid grid-cols-2 gap-4 minXl:grid-cols-3">
+            <!-- sinlge card -->
+            <div class="card  maxSm:mb-6 bg-white shadow rounded-sm">
+                <div class="card-img-container relative">
+                <img src="./plugins/Image/white-sofas-inside-building-2507010.jpg" alt="img" class="card-img block">
+                <p class="card-img-tex3 card-img-text capitalize   text-gray-100 rounded">Bedroom space</p>
+                </div>
+                <!-- CARD CONTENT -->
+                <div class="card-content p-6">
+                <h5 class="card-title font-normal font-hairline text-gray-900 text-2xl tracking-wide">Lifestyle Space</h5>
+                <div class="card-location flex align-baseline mt-3">
+                    <i class="fa fa-map-marker-alt text-gray-600 mr-4 mt-1"></i>
+                    <p class="text-gray-600 text-base ">New York, Manhatthan, USA</p>
+                </div>
+                <div class="card-rating mt-4">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star not-checked"></i>
+                    <button class="star-rating-btn  font-bold text-gray-100 ">4.0</button>
+                </div>
+                <div class="card-text-container grid grid-cols-3 gap-8 mt-3">
+                    <p class="card-text text-gray-600">Monthly</p>
+                    <p class="card-text text-gray-600">People</p>
+                    <p class="card-text text-gray-600">Sq.Ft</p>
+                </div>
+                <div class="card-number-container grid grid-cols-3 gap-8 mt-2">
+                    <p class="card-number text-gray-900 text-xl font-bold">$2100</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">12</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">1200</p>
+                </div>
+                <button class="card-browse-btn text-gray-100 rounded-sm mt-3 minMd:mt-8 text-center p-2 block rounded-full hover:opacity-75 transition-all duration-500 ease-in-out">More Detail</button>
+                </div>
+               
+            </div>
+             <!-- sinlge card -->
+             <div class="card  maxSm:mb-6 bg-white shadow rounded-sm">
+                <div class="card-img-container relative">
+                <img src="./plugins/Image/white-bed-linen-near-white-wooden-cabinet-3634741.jpg" alt="img" class="card-img block">
+                <p class="card-img-text capitalize   text-gray-100 rounded">Bedroom space</p>
+                </div>
+                <!-- CARD CONTENT -->
+                <div class="card-content p-6">
+                <h5 class="card-title font-normal font-hairline text-gray-900 text-2xl tracking-wide">Collaborative Workspace</h5>
+                <div class="card-location flex align-baseline mt-3">
+                    <i class="fa fa-map-marker-alt text-gray-600 mr-4 mt-1"></i>
+                    <p class="text-gray-600 text-base ">New York, Manhatthan, USA</p>
+                </div>
+                <div class="card-rating mt-4">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star not-checked"></i>
+                    <button class="star-rating-btn  font-bold text-gray-100 ">4.0</button>
+                </div>
+                <div class="card-text-container grid grid-cols-3 gap-8 mt-3">
+                    <p class="card-text text-gray-600">Monthly</p>
+                    <p class="card-text text-gray-600">People</p>
+                    <p class="card-text text-gray-600">Sq.Ft</p>
+                </div>
+                <div class="card-number-container grid grid-cols-3 gap-8 mt-2">
+                    <p class="card-number text-gray-900 text-xl font-bold">$2100</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">12</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">1200</p>
+                </div>
+                <button class="card-browse-btn text-gray-100 rounded-sm mt-3 minMd:mt-8 text-center p-2 block rounded-full hover:opacity-75 transition-all duration-500 ease-in-out">More Detail</button>
+                </div>
+            </div>
+            <!-- sinlge card -->
+            <div class="card  maxSm:mb-6 bg-white shadow rounded-sm">
+                <div class="card-img-container relative">
+                <img src="./plugins/Image/apartment-blinds-cabinets-chairs-349749.jpg" alt="img" class="card-img block">
+                <p class="card-img-text3 card-img-text capitalize   text-gray-100 rounded">Dinning space</p>
+                </div>
+                <!-- CARD CONTENT -->
+                <div class="card-content p-6">
+                <h5 class="card-title font-normal font-hairline text-gray-900 text-2xl tracking-wide">Collaborative Workspace</h5>
+                <div class="card-location flex align-baseline mt-3">
+                    <i class="fa fa-map-marker-alt text-gray-600 mr-4 mt-1"></i>
+                    <p class="text-gray-600 text-base ">New York, Manhatthan, USA</p>
+                </div>
+                <div class="card-rating mt-4">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <button class="star-rating-btn  font-bold text-gray-100 ">5.0</button>
+                </div>
+                <div class="card-text-container grid grid-cols-3 gap-8 mt-3">
+                    <p class="card-text text-gray-600">Monthly</p>
+                    <p class="card-text text-gray-600">People</p>
+                    <p class="card-text text-gray-600">Sq.Ft</p>
+                </div>
+                <div class="card-number-container grid grid-cols-3 gap-8 mt-2">
+                    <p class="card-number text-gray-900 text-xl font-bold">$2100</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">12</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">1200</p>
+                </div>
+                <button class="card-browse-btn text-gray-100 rounded-sm mt-3 minMd:mt-8 text-center p-2 block rounded-full hover:opacity-75 transition-all duration-500 ease-in-out">More Detail</button>
+                </div>
+            </div>
+             <!-- sinlge card -->
+             <div class="card  maxSm:mb-6 bg-white shadow rounded-sm">
+                <div class="card-img-container relative">
+                <img src="./plugins/Image/white-bed-linen-near-white-wooden-cabinet-3634741.jpg" alt="img" class="card-img block">
+                <p class="card-img-text2 capitalize card-img-text  text-gray-100 rounded">Parlour space</p>
+                </div>
+                <!-- CARD CONTENT -->
+                <div class="card-content p-6">
+                <h5 class="card-title font-normal font-hairline text-gray-900 text-2xl tracking-wide">Collaborative Workspace</h5>
+                <div class="card-location flex align-baseline mt-3">
+                    <i class="fa fa-map-marker-alt text-gray-600 mr-4 mt-1"></i>
+                    <p class="text-gray-600 text-base ">New York, Manhatthan, USA</p>
+                </div>
+                <div class="card-rating mt-4">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star not-checked"></i>
+                    <button class="star-rating-btn  font-bold text-gray-100 ">4.0</button>
+                </div>
+                <div class="card-text-container grid grid-cols-3 gap-8 mt-3">
+                    <p class="card-text text-gray-600">Monthly</p>
+                    <p class="card-text text-gray-600">People</p>
+                    <p class="card-text text-gray-600">Sq.Ft</p>
+                </div>
+                <div class="card-number-container grid grid-cols-3 gap-8 mt-2">
+                    <p class="card-number text-gray-900 text-xl font-bold">$2100</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">12</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">1200</p>
+                </div>
+                <button class="card-browse-btn text-gray-100 rounded-sm mt-3 minMd:mt-8 text-center p-2 block rounded-full hover:opacity-75 transition-all duration-500 ease-in-out">More Detail</button>
+                </div>
+            </div>
+             <!-- sinlge card -->
+             <div class="card  maxSm:mb-6 bg-white shadow rounded-sm">
+                <div class="card-img-container relative">
+                <img src="./plugins/Image/white-bed-linen-near-white-wooden-cabinet-3634741.jpg" alt="img" class="card-img block">
+                <p class="card-img-text2 card-img-text capitalize   text-gray-100 rounded">Toilet space</p>
+                </div>
+                <!-- CARD CONTENT -->
+                <div class="card-content p-6">
+                <h5 class="card-title font-normal font-hairline text-gray-900 text-2xl tracking-wide">Collaborative Workspace</h5>
+                <div class="card-location flex align-baseline mt-3">
+                    <i class="fa fa-map-marker-alt text-gray-600 mr-4 mt-1"></i>
+                    <p class="text-gray-600 text-base ">New York, Manhatthan, USA</p>
+                </div>
+                <div class="card-rating mt-4">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star not-checked"></i>
+                    <i class="fa fa-star not-checked"></i>
+                    <button class="star-rating-btn  font-bold text-gray-100 ">3.0</button>
+                </div>
+                <div class="card-text-container grid grid-cols-3 gap-8 mt-3">
+                    <p class="card-text text-gray-600">Monthly</p>
+                    <p class="card-text text-gray-600">People</p>
+                    <p class="card-text text-gray-600">Sq.Ft</p>
+                </div>
+                <div class="card-number-container grid grid-cols-3 gap-8 mt-2">
+                    <p class="card-number text-gray-900 text-xl font-bold">$2100</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">12</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">1200</p>
+                </div>
+                <button class="card-browse-btn text-gray-100 rounded-sm mt-3 minMd:mt-8 text-center p-2 block rounded-full hover:opacity-75 transition-all duration-500 ease-in-out">More Detail</button>
+                </div>
+            </div>
+            <!-- sinlge card -->
+            <div class="card  maxSm:mb-4 bg-white shadow rounded-sm">
+                <div class="card-img-container relative">
+                <img src="./plugins/Image/white-bed-linen-near-white-wooden-cabinet-3634741.jpg" alt="img" class="card-img block">
+                <p class="card-img-text capitalize   text-gray-100 rounded">Bedroom space</p>
+                </div>
+                <!-- CARD CONTENT -->
+                <div class="card-content p-6">
+                <h5 class="card-title font-normal font-hairline text-gray-900 text-2xl tracking-wide">Collaborative Workspace</h5>
+                <div class="card-location flex align-baseline mt-3">
+                    <i class="fa fa-map-marker-alt text-gray-600 mr-4 mt-1"></i>
+                    <p class="text-gray-600 text-base ">New York, Manhatthan, USA</p>
+                </div>
+                <div class="card-rating mt-4">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <button class="star-rating-btn  font-bold text-gray-100 ">5.0</button>
+                </div>
+                <div class="card-text-container grid grid-cols-3 gap-8 mt-3">
+                    <p class="card-text text-gray-600">Monthly</p>
+                    <p class="card-text text-gray-600">People</p>
+                    <p class="card-text text-gray-600">Sq.Ft</p>
+                </div>
+                <div class="card-number-container grid grid-cols-3 gap-8 mt-2">
+                    <p class="card-number text-gray-900 text-xl font-bold">$2100</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">12</p>
+                    <p class="card-number text-gray-900 text-xl font-bold">1200</p>
+                </div>
+                <button class="card-browse-btn text-gray-100 rounded-sm mt-3 minMd:mt-8 text-center p-2 block rounded-full hover:opacity-75 transition-all duration`-500 ease-in-out">More Detail</button>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<section class="min-w-full maxSm:p-4 maxSm:pt-24 minMd:pt-16 bg-gray-900">
+    <div class="minMd:w-4/5 mx-auto text-center minMd:grid grid-cols-4 gap-4 text-left">
+            <!-- Single Footer -->
+        <div class="text-left listing-footer ">
+            <a href="#rentailindex.html">
+            <h3 class="text-gray-100 text-4xl mb-4 uppercase">Rental</h3>
+            </a>
+            <p class="text-gray-600 maxSm:w-3/4 mb-4 minMd:w-1/2">For those seeking the finest in services and technology in a downtown business center, without the high cost</p>
+            <div class="text-gray-100 maxSm:mb-12 listing-footer">
+                <a href="#"><i class="fab fa-facebook footer-icon listing-footer-icon hover:text-gray-400 transition-all duration-500 ease-in-out"></i>
+                </a>
+                <a href="#"><i class="fab fa-twitter listing-footer-icon footer-icon hover:text-gray-400 transition-all duration-500 ease-in-out"></i>
+                </a>
+                <a href="#">
+                <i class="fab fa-instagram footer-icon listing-footer-icon hover:text-gray-400 transition-all duration-500 ease-in-out"></i>
+                </a>
+                <a href="#">
+                <i class="fas fa-envelope listing-footer-icon footer-icon hover:text-gray-400 transition-all duration-500 ease-in-out"></i>
+                </a>
+            </div>
+        </div>
+            <!-- Single Footer -->
+        <div class="text-left maxSm:mb-4 listing-footer">
+            <a href="#">
+            <h3 class="text-gray-100 text-xl mb-2 capitalize">About us</h3>
+            </a>
+            <p class="text-gray-600 text-lg minMd:mb-5">Blog</p>
+            <p class="text-gray-600 text-lg minMd:mb-5 ">About Us</p>
+            <p class="text-gray-600 text-lg minMd:mb-5">Products</p>
+            <p class="text-gray-600 text-lg">Contact Us</p>
+            
+        </div>
+            <!-- Single Footer -->
+        <div class="text-left maxSm:mb-4 listing-footer">
+            <a href="#">
+            <h3 class="text-gray-100 text-xl mb-2 capitalize">Market</h3>
+            </a>
+            <p class="text-gray-600 text-lg minMd:mb-5">Sale FAQ</p>
+            <p class="text-gray-600 text-lg minMd:mb-5">How to register</p>
+            <p class="text-gray-600 text-lg minMd:mb-5">Sell Goods</p>
+            <p class="text-gray-600 text-lg minMd:mb-5">Receive Payment</p>
+            <p class="text-gray-600 text-lg minMd:mb-5">Become an Affiliate</p>
+            <p class="text-gray-600 text-lg">Support</p>
+        </div>
+            <!-- Single Footer -->
+        <div class="text-left maxSm:mb-4 listing-footer">
+            <a href="#">
+            <h3 class="text-gray-100 text-xl mb-2 capitalize">Susbcribe</h3>
+            </a>
+            <p class="text-gray-600 text-lg maxSm:w-3/4 mb-4">Join our mailing list. We write rarely, but only the best content.</p>
+            <div class="w-full">
+                <input type="email" name="" id="" class="block w-full p-3 mb-3 rounded" required placeholder="Email Address">
+                <button class="block w-full footer-btn rounded p-2 text-white mb-4">Subscribe</button>
+            </div>
+            <p class="text-gray-600 text-left listing-footer">We will never share your details. See our <a href="#" class="text-gray-100 hover:text-gray-100">Privacy Policy</a></p>
+        </div>
+
+          <p class="text-gray-100 text-center mt-12 mb-6">&copy;2020 Rental. All rights reserved</p>  
+       
+    </div>
+</section>
+                            
+                                
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <!-- scripts jQuery -->
+<script src="./plugins/jquery-3.4.1.min (1).js"></script>
+<!-- animate css and wow -->
+<script src="./plugins/WOW-master/dist/wow.min.js"></script>
+<!-- boostrap js -->
+<script src="./plugins/bootstrap.js"></script>
+<!-- javascript -->
+<script src="./plugins/index.js"></script>         
+</body>
+</html>
